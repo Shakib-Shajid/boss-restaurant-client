@@ -47,6 +47,7 @@ const Menu = () => {
                 title={"soupImg"}
                 img={soupImg}
             ></MenuCategory>
+
         </div>
     );
 };
