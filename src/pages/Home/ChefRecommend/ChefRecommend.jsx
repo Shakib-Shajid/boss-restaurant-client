@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import RecommendItem from "./RecommendItem";
+import SectionTitle from "../../../components/SectionTitle/SectionTitle";
 
 const ChefRecommend = () => {
 
@@ -13,11 +14,14 @@ const ChefRecommend = () => {
             })
     }, [])
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
-            {
-                recommend.map(recommendItem => <RecommendItem key={recommendItem._id} recommendItem={recommendItem}></RecommendItem>)
-            }
-        </div>
+        <section>
+            <SectionTitle subHeading={"---Should Try---"} heading={"CHEF RECOMMENDS"}></SectionTitle>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+                {
+                    recommend.map(recommendItem => <RecommendItem key={recommendItem._id} recommendItem={recommendItem}></RecommendItem>)
+                }
+            </div>
+        </section>
     );
 };
 
